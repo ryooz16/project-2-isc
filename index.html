@@ -3,10 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+    <link rel="shortcut icon" href="assets/img/3.png" type="image/x-icon" />
   </head>
   <body>
-    <h1>Hello World</h1>
-    <a href="/auth/login.html">Login</a>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary py-2 py-lg-1 fixed-top">
+        <div class="container-fluid mx-lg-5 d-flex justify-content-between">
+          <a class="navbar-brand fs-1 text-uppercase fw-bold text-start text-secondary-emphasis col-lg-6" href="index.html"><i class="bi bi-alt"></i>K6</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse col-lg-6 justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav d-flex column-gap-2">
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" href="#contact">Contact</a>
+              <a id="loginBtn" href="auth/login.html" class="btn btn-success fw-bold">Login</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="position-relative overflow-hidden">
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-image"></div>
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+        <div class="d-flex flex-column text-center justify-content-center align-items-center text-white min-vh-100 p-heading position-relative z-1">
+          <h1 class="heading-home fs-lg-1">Web Design & <br /><span class="text-success">Development</span> <br />Course</h1>
+          <p class="fs-lg-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt neque expedita atque eveniet <br />
+            quis nesciunt. Quos nulla vero consequuntur, fugit <br />
+            a quae totam ipsa illum minus laudantium?
+          </p>
+          <a href="auth/registration.html" class="btn btn-success px-lg-3 py-lg-2 fw-bold">Join Us</a>
+        </div>
+      </section>
+
+      <section id="about" class="bg-about">
+        <div class="min-vh-100 py-about m-0 row d-flex flex-column flex-lg-row justify-content-center align-items-center row-gap-3 row-gap-lg-0">
+          <h2 class="d-lg-none text-center fs-1">About</h2>
+          <div class="col-lg-6 d-flex justify-content-center align-items-center">
+            <img src="assets/img/1.jpg" alt="about" class="w-75 rounded-3" />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="d-none d-lg-block fs-1">About</h2>
+            <p class="text-about w-100 fs-lg-4 px-4 px-lg-0">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium blanditiis excepturi totam commodi placeat aperiam autem ab rem, deleniti, eius dolore voluptatem nisi id. Nam consequuntur sed quo ipsam commodi.Lorem ipsum
+              dolor sit amet consectetur adipisicing elit. Laudantium blanditiis nisi officiis quisquam possimus voluptatum eaque, placeat pariatur? Earum nihil ad autem, illo ex velit tempore eius nisi laudantium veritatis?Lorem ipsum,
+              dolor sit amet consectetur adipisicing elit. Dolores velit dolorum, eveniet iure officiis consectetur id nisi quisquam corrupti ratione incidunt, voluptatibus quidem sunt facere fugiat tempore nihil eaque qui.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="min-vh-100 d-flex flex-column justify-content-center align-items-center text-white">
+          <h2 class="fs-1">Contact Us</h2>
+          <p class="px-3 px-lg-0 text-center">Feel free to reach out for inquiries or collaborations.</p>
+          <!-- <form action="#" method="post" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn submit-button">Send Message</button>
+          </form> -->
+          <div class="w-contact p-4">
+            <form>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" placeholder="" autocomplete="off" required />
+                <label for="inputEmail1" class="form-label text-black">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="" id="floatingTextarea" autocomplete="off" required style="min-height: 10em"></textarea>
+                <label for="floatingTextarea" class="text-black">Message</label>
+              </div>
+              <button type="submit" class="btn btn-success w-100 ms-0">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container-fluid py-4">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <ul class="d-flex justify-content-around align-items-center list-unstyled column-gap-4 fs-footer-a">
+            <li>
+              <a href="#" class="text-decoration-none"><i class="bi bi-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none"><i class="bi bi-twitter-x"></i></a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none"><i class="bi bi-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#" class="text-decoration-none"><i class="bi bi-linkedin"></i></a>
+            </li>
+          </ul>
+          <h3 class="fs-footer-header">KELOMPOK 6</h3>
+          <p class="fs-footer-p">© 2024 Kelompok 6. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      const loginBtn = document.getElementById('loginBtn');
+
+      if (sessionStorage.getItem('isLoggedIn') === 'true') {
+        // Jika sudah login, ganti teks dan link
+        loginBtn.textContent = 'Dashboard';
+        loginBtn.href = 'dashboard.html';
+      } else {
+        // Jika belum login, tetap tombol Login dengan link ke halaman login
+        loginBtn.textContent = 'Login';
+        loginBtn.href = 'auth/login.html';
+      }
+    </script>
   </body>
 </html>

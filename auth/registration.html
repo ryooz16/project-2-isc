@@ -3,19 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registrasi</title>
+    <title>Registration</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <h2>Registration</h2>
-    <form id="regisForm">
-      <label for="regisUsername">Username</label>
-      <input type="text" id="regisUsername" />
-      <label for="regisPassword">Password</label>
-      <input type="password" id="regisPassword" />
-      <button type="submit">Registration</button>
-    </form>
-    <a href="login.html">Login</a>
+    <div class="container-fluid bg-body-tertiary min-vh-100 d-flex justify-content-center align-items-center">
+      <div class="box-login bg-white shadow w-custom1 d-flex flex-column justify-content-center align-items-center px-5 py-3 row-gap-4 rounded-4">
+        <h2 class="mt-4">Registration</h2>
+        <form id="regisForm" class="w-100">
+          <div class="form-floating mb-4">
+            <input type="text" class="form-control" id="regisUsername" placeholder="Create Username" autocomplete="off" required />
+            <label for="regisUsername" class="form-label">Create Username</label>
+          </div>
+          <div class="form-floating mb-4">
+            <input type="text" class="form-control" id="regisPassword" placeholder="Create Password" autocomplete="off" required />
+            <label for="regisPassword" class="form-label">Create Password</label>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Registration</button>
+        </form>
+        <a href="login.html" class="text-decoration-none mb-4">Have Account? Login Here!</a>
+      </div>
+    </div>
 
+    <!-- Toast Success Notifikasi -->
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 1100">
+      <div id="regisSuccessToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            <span class="fw-bold fs-5">Registrasi Sukses!</span> <br />
+            <span>Silahkan login</span>
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Failed Notifikasi -->
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 1100">
+      <div id="regisFailedToast" class="toast align-items-center text-bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            <span class="fw-bold fs-5">Registrasi Gagal!</span> <br />
+            <span>Username sudah digunakan, silahkan gunakan username yang lain</span>
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/bootstrap.min.js"></script>
     <script src="/auth/js/auth.js"></script>
   </body>
 </html>

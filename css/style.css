@@ -1,0 +1,129 @@
+header,
+main {
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url(isc.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.h-nav {
+  height: 5em;
+}
+
+.h-messageForm {
+  min-height: 100em;
+}
+
+.text-green {
+  color: rgb(30, 249, 114);
+}
+
+.heading-home {
+  font-size: 4.5em;
+}
+
+.p-heading {
+  padding-top: 5em;
+}
+
+#home .bg-image {
+  background-image: url('/assets/img/2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+#home .opacity-50 {
+  z-index: 0;
+}
+
+.fs-lg-1 {
+  font-size: 5em;
+}
+
+.fs-lg-2 {
+  font-size: 1.2em;
+}
+
+.fs-lg-3 {
+  font-size: 5em;
+}
+
+.fs-lg-4 {
+  font-size: 1em;
+}
+
+.text-about {
+  text-align: start;
+}
+
+.w-custom1 {
+  width: 27%;
+}
+
+.w-contact {
+  width: 50%;
+}
+
+.py-about {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.fs-footer-header {
+  font-size: 1.5em;
+}
+
+.fs-footer-p {
+  font-size: 1em;
+}
+
+.fs-footer-a {
+  font-size: 1.7em;
+}
+
+@media (max-width: 576px) {
+  .w-custom1 {
+    width: 100%;
+  }
+  .fs-lg-1 {
+    font-size: 2.8em;
+  }
+  .fs-lg-2 {
+    font-size: 0.8em;
+  }
+  .fs-lg-3 {
+    font-size: 1em;
+  }
+  .fs-lg-4 {
+    font-size: 0.9em;
+  }
+  .text-about {
+    text-align: justify;
+  }
+  .w-contact {
+    width: 100%;
+  }
+  .py-about {
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
+  .fs-footer-header {
+    font-size: 1.1em;
+  }
+  .fs-footer-p {
+    font-size: 0.8em;
+  }
+  .fs-footer-a {
+    font-size: 1.3em;
+  }
+}
+
+.bg-about {
+  background-color: #f9f9f9;
+}
+
+.toast {
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Animasi toast muncul */
+}
